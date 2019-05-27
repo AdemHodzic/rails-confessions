@@ -1,5 +1,7 @@
 {
   "name": "todo",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.7.5"
+  }
 }
