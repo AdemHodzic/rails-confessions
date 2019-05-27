@@ -6,7 +6,12 @@
       </div>
       <div class="level-right">
         <p class="level-item small-padding">
-          <!-- <%= link_to("Manage Confessions", confessions_path, :class => "button is-dark is-outlined") %> -->
+          <% if  current_user %>
+            <%= link_to("Sign Out", destroy_user_session_path, :method => :delete, :class => "button small-margin-sides is-primary ") %>
+          <% else %>
+            <%= link_to("Sign Up", new_user_registration_path, :class => "button small-margin-sides is-primary") %>
+            <%= link_to("Sign In", new_user_session_path, :class => "button small-margin-sides is-info ") %>
+          <% end %>
         </p>
       </div>
     </nav>

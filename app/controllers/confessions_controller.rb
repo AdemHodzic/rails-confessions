@@ -1,6 +1,6 @@
 class ConfessionsController < ApplicationController
   before_action :set_confession, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
   # GET /confessions
   # GET /confessions.json
   def index
