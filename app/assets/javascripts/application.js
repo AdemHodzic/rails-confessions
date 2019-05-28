@@ -13,8 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require js-routes
 //= require_tree .
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
   (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
     let $notification = $delete.parentNode;
     console.log($delete)
@@ -24,4 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
     });
   });
+
+  (document.querySelectorAll('.confession') || []).forEach((confession) => {
+    confession.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = confession.dataset.id;
+      const url = Routes.confession_path(id);
+      window.location = url;
+    });
+  });
+
 });

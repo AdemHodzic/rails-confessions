@@ -1,7 +1,4 @@
-<%= link_to 'Show', confession, class: "button is-link" %>
-
 <% if current_user && (confession.user_id == current_user.id || current_user.admin) %>
   <%= link_to 'Edit', edit_confession_path(confession), class: "button is-warning" %>
   <%= link_to 'Destroy', confession, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %>
 <% end %>
-

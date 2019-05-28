@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.3'
 gem 'devise'
 gem "bulma-rails", "~> 0.7.5"
+gem "js-routes"    
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server

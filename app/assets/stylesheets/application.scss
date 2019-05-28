@@ -15,6 +15,14 @@
  */
  @import 'bulma/bulma';
 
+header {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  @media screen and (max-width: 768px) {
+    margin: 2%;
+  }
+}
+
 .small-padding {
   padding: 2%;
 }
@@ -31,4 +39,9 @@
   font-size: 72px;
   text-align: center;
   margin-top: 15%;
+}
+
+.confession:hover {
+  cursor: pointer;
+  background: hsl(0, 0%, 96%)
 }
