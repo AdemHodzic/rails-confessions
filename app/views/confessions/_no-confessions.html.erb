@@ -1,0 +1,6 @@
+<div class="no-confessions">
+  <h1>No Confessions <i class="fas fa-times is-danger"></i></h1>
+  <% if current_user %>
+    <%= link_to 'New Confession', new_confession_path, class: "button is-success small-margin-gap" %>
+  <% end %>
+</div>

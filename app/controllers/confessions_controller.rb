@@ -25,7 +25,7 @@ class ConfessionsController < ApplicationController
   # POST /confessions.json
   def create
     @confession = Confession.new(confession_params)
-
+    @confession.user_id = current_user.id
     respond_to do |format|
       if @confession.save
         format.html { redirect_to @confession, notice: 'Confession was successfully created.' }
@@ -40,6 +40,8 @@ class ConfessionsController < ApplicationController
   # PATCH/PUT /confessions/1
   # PATCH/PUT /confessions/1.json
   def update
+    @confession = Confession.new(confession_params)
+    @confession.edited = true
     respond_to do |format|
       if @confession.update(confession_params)
         format.html { redirect_to @confession, notice: 'Confession was successfully updated.' }

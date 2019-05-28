@@ -16,9 +16,12 @@
 //= require_tree .
 document.addEventListener('DOMContentLoaded', () => {
   (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-    $notification = $delete.parentNode;
-    $delete.addEventListener('click', () => {
-      $notification.parentNode.removeChild($notification);
+    let $notification = $delete.parentNode;
+    console.log($delete)
+    console.log($notification)
+    $delete.addEventListener('click', (e) => {
+      $notification.style.display = 'none';
+      e.preventDefault();
     });
   });
 });
