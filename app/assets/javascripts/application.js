@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require js-routes
+//= require slideout
 //= require_tree .
 document.addEventListener('turbolinks:load', () => {
   (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
@@ -35,4 +36,15 @@ document.addEventListener('turbolinks:load', () => {
     });
   });
 
+  const slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70,
+    side: 'right'
+  });
+
+  document.querySelector('#hamburgerMenu').addEventListener('click', function() {
+    slideout.toggle();
+  });
 });
