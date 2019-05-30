@@ -1,24 +1,17 @@
-# README
+# Confess
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Ruby application for leaving anonymous confessions.
 
-Things you may want to cover:
+Used in this project:
 
-* Ruby version
+* Ruby
 
-* System dependencies
+* Ruby on Rails
 
-* Configuration
+* MySQL
 
-* Database creation
+* Bulma
 
-* Database initialization
+* Digital Ocean
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tou can check out live project [here](http://kodeblok.com/)
