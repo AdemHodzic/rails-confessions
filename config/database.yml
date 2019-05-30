@@ -13,12 +13,12 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: railstodo
-  password: railstodo
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
+  username: railstodo
+  password: railstodo
   database: railstodo
 
 # Warning: The database defined as "test" will be erased and
@@ -26,6 +26,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  username: railstodo
+  password: railstodo
   database: todo_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
